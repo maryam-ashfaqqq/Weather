@@ -1,16 +1,104 @@
-# React + Vite
+# Weather App 🌤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple and responsive weather application built with React.
 
-Currently, two official plugins are available:
+I created this project to practice working with APIs, handling user input, managing state, and building a real-world application instead of only learning concepts separately.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The app allows users to search for any city and get current weather information like temperature, humidity, wind speed, and weather conditions.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the Oxlint configuration
+- Search weather by city name
+- Press Enter or click the search button to find weather
+- Shows current temperature and weather condition
+- Displays humidity and wind speed
+- Shows weather icons according to conditions
+- Saves recent searched cities
+- Click previous searches to view weather again
+- Handles loading and error states
+- Responsive design for mobile and desktop
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+
+## 🛠️ Technologies Used
+
+- React.js
+- JavaScript
+- CSS
+- OpenWeather API
+- Vite
+
+
+## 📚 What I Learned
+
+While building this project, I practiced:
+
+- How React components communicate with each other using props
+- Managing application data with useState
+- Fetching external data using APIs
+- Handling asynchronous operations
+- Working with loading and error states
+- Creating reusable components
+- Improving user experience with better UI
+
+
+## 🚀 How It Works
+
+1. User enters a city name.
+2. The app sends a request to OpenWeather API.
+3. Weather data is received from the API.
+4. React updates the UI with the latest information.
+5. Searched cities are stored in history for quick access.
+
+
+## 📂 Project Structure
+
+src/
+│
+├── components/
+│   ├── Header.jsx
+│   ├── SearchBar.jsx
+│   ├── WeatherCard.jsx
+│   └── History.jsx
+│
+├── App.jsx
+├── App.css
+└── main.jsx
+
+
+## ⚙️ Installation
+
+Clone this repository:
+
+git clone your-repository-link
+
+
+Install dependencies:
+
+npm install
+
+
+Create a `.env` file:
+
+VITE_API_KEY=your_api_key
+
+
+Run the project:
+
+npm run dev
+
+
+## 🌱 Future Improvements
+
+- Add weather forecast for upcoming days
+- Add dark mode
+- Add current location weather
+- Add more animations
+- Improve UI design
+
+
+## 🙌 Author
+
+Maryam Ishfaq
+
+Frontend Developer
