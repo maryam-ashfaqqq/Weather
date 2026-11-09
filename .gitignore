@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Secrets and saved searches stay on this computer
+.env
+server/data/history.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
