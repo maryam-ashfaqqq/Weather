@@ -86,7 +86,7 @@ function App() {
   return (
     <div
       data-theme={theme}
-      className={`relative min-h-screen bg-gradient-to-br ${themeClass[theme]} text-white`}
+      className={`relative min-h-screen bg-linear-to-br ${themeClass[theme]} text-white`}
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="stars absolute inset-0" />
