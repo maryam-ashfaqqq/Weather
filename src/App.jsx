@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import Loader from "./components/Loader"
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import WeatherCard from "./components/WeatherCard";
@@ -13,7 +14,7 @@ import { themeClass, themeFor } from "./weatherTheme";
 // This screen uses Tailwind, so those old rules are not imported.
 
 function App() {
-  const [city, setCity] = useState("Lahore");
+  const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -41,7 +42,7 @@ function App() {
       const label = coords ? query : data.city || query;
 
       setWeather({ ...data, placeLabel: coords ? query : "" });
-      setCity(data.city || query);
+      // setCity(data.city || query);
       setSelected(label);
 
       try {
@@ -126,11 +127,7 @@ function App() {
         )}
 
         {loading && !weather && (
-          <div className="grid gap-5" role="status" aria-label="Loading weather">
-            <div className={`${glass} h-80 animate-pulse`} />
-            <div className={`${glass} h-36 animate-pulse`} />
-            <div className={`${glass} h-48 animate-pulse`} />
-          </div>
+          <Loader/>
         )}
 
         {weather && (

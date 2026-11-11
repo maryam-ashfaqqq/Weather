@@ -17,7 +17,7 @@ function HourlyForecast({ hours }) {
         {hours.map((hour, index) => (
           <article
             key={`${hour.time}-${index}`}
-            className="min-w-[92px] rounded-2xl bg-white/10 px-3 py-3 text-center"
+            className="min-w-23 rounded-2xl bg-white/10 px-3 py-3 text-center"
           >
             <p className="text-xs text-white/70">{hour.time}</p>
             <WeatherIcon code={hour.icon} className="mx-auto my-1 h-8 w-8" />

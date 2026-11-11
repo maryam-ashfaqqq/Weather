@@ -2,13 +2,13 @@
 
 import { Router } from "express";
 import { cleanCity, cleanCoordinates } from "../cleanCity.js";
-import { addCity, readHistory } from "../historyStore.js";
+import { addHistory, getHistory } from "../historyStore.js";
 
 const router = Router();
 
 router.get("/", async (req, res) => {
   try {
-    const history = await readHistory();
+    const history = await getHistory();
     res.json({ history });
   } catch {
     res.status(500).json({ message: "Could not load search history." });
@@ -25,11 +25,8 @@ router.post("/", async (req, res) => {
       return;
     }
 
-    const history = await addCity({
-      label: city,
-      lat: coords?.lat,
-      lon: coords?.lon,
-    });
+    await addHistory(city);
+    const history = await getHistory();
     res.json({ history });
   } catch {
     res.status(500).json({ message: "Could not save that city." });
